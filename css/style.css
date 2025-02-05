@@ -1,3 +1,20 @@
 * {
+    background-color: rgb(36, 6, 63);
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    color: bisque;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    color: bisque;
+    width: 100px;
+}
+
+h1 {
     
 }
