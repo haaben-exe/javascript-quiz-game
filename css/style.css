@@ -15,7 +15,10 @@ button {
     width: 100px;
 }
 
-.hidden {
+.hidden-1 {
     visibility: hidden;
 }
 
+.blue {
+    background-color: blue;
+}

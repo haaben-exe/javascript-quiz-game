@@ -17,16 +17,15 @@
             many questions I got right and wrong so that I can know
             what how many more mistakes I have left before I can't continue the quiz.
 
-        5) I want a clear and concise explanation as to why the answer 
-            is correct, even if why my choice was wrong, so that I can learn from it and apply it on my next playthrough.
-        
-        6) At the end of my game, I want to be presented with a clear 
+        5) At the end of my game, I want to be presented with a clear 
             message indicating whether or not I won or loss.
         
-        7) I want to be able to track my progress before I close my 
-            browser so I can play again and see if I made any improvements on any of my attempts.
+        
+     // 6) I want a clear and concise explanation as to why the answer is correct, even if why my choice was wrong, so that I can learn from it and apply it on my next playthrough.
+        
+     // 7) I want to be able to track my progress before I close my browser so I can play again and see if I made any improvements on any of my attempts.
  
-        // 8) I want the option to play again in order to improve my score for the next playthrough.
+     // 8) I want the option to play again in order to improve my score for the next playthrough.
 
 
     Pseudocode:
