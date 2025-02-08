@@ -5,18 +5,22 @@
 
 /*------------------------ Constants ------------------------------*/
 // let playerChoice
-let score = 0;
-let answerAccuracy = 0;
+let userAccuracy = {
+    correct: 0,
+    incorrect: 0,
+    total: 0,
+};
 
 const jsQuiz = [
-    { question: "What is a Javascript Function?", 
+    {
+        question: "What is a Javascript Function?",
         options: [
-            "A reusable block of code designed to perform a specific task.", 
-            "question-1-answer-b", 
-            "question-1-answer-c", 
+            "A reusable block of code designed to perform a specific task.",
+            "question-1-answer-b",
+            "question-1-answer-c",
             "question-1-answer-d"
-        ], 
-        answer: "A reusable block of code designed to perform a specific task." 
+        ],
+        answer: "A reusable block of code designed to perform a specific task."
     },
 ];
 
@@ -27,6 +31,9 @@ const jsQuiz = [
 
 /*------------------ Cached Element References --------------------*/
 
+let clickedButton = null;
+const correctAnswerOne = jsQuiz[0].answer;
+
 
 
 /*------------------------- Functions -----------------------------*/
@@ -36,66 +43,102 @@ function checkAnswer() {
 
     if (jsQuiz[0].options[0] === jsQuiz[0].answer) {
         console.log("Correct!");
-    }    
+    }
     else {
         console.log("Incorrect!");
     }
 }
 
-console.log(jsQuiz[0].answer);
-checkAnswer();
 
 
- // answer === same location in each object/index in jsquiz array
-    // the option a user selects by clickEvent should be compared to the correct answer
-    // each button should have a clickEvent that will make the comparison for the specific question
-        // Add clickEvent to the buttons and console.log the event.target
-        // Inside clickEvent do the if statement to make the comparison (like done within this very function)
-        // Make it dynamic so that each click makes the comparison for each respective object
+function displayAccuracy(quizAnswer) {
+    if (quizAnswer) {
+        userAccuracy.correct = userAccuracy.correct + 1;
+    } else {
+        userAccuracy.incorrect = userAccuracy.incorrect + 1;
+    } {
+        userAccuracy.total = userAccuracy.total + 1;
+    }
+    displayAccuracy.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`
+}
+
 
 /*----------------------- Event Listeners -------------------------*/
 
-const buttonStart = document.querySelector("#start")
+console.log(`${userAccuracy.correct}`)
+
+
+const correctButtonElement = document.createElement("button");
+correctButtonElement.textContent = "Correct!";
+correctButtonElement.disabled = true;
+
+
+const incorrectButtonElement = document.createElement("button");
+incorrectButtonElement.textContent = "Incorrect!";
+incorrectButtonElement.disabled = true;
+
+
+const answerResults = document.querySelector("#answer-result-1")
+
+const userTracker = document.createElement("div")
+userTracker.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
+
+const accuracyTracker = document.querySelector("#accuracy-tracker")
+
+
+const buttonStart = document.querySelector("#start");
 buttonStart.addEventListener("click", () => {
-    document.querySelector(".quiz-container").classList.remove("hidden-1")
+    document.querySelector(".quiz-container").classList.remove("hidden-question-1");
+    document.querySelector(".landing-page").classList.remove("visible-landing-page");
     console.log("Button click confirmed");
 })
-
-// const firstQuestionButtons = document.querySelector("#answer-buttons-1")
-// console.log(firstQuestionButtons)
-
-let clickedButton = null;
-const correctAnswerOne = jsQuiz[0].answer;
 
 
 const answerButtonsOne = document.querySelectorAll(".answer-buttons-1")
 answerButtonsOne.forEach((answerButtonOne) => {
     answerButtonOne.addEventListener("click", (event) => {
-        console.log(jsQuiz[0].answer)
         if (event.target) {
             answerButtonsOne.forEach((btn) => {
                 btn.classList.remove("blue");
+                answerButtonsOne.forEach(btn => btn.disabled = true);
             })
-            console.log(event.target)
+
             clickedButton = event.target;
             clickedButton.classList.add("blue");
         }
-    })
-});
 
+        if (event.target.innerText === correctAnswerOne) {
+            answerResults.appendChild(correctButtonElement);
 
+            userAccuracy.correct = userAccuracy.correct + 1;
+            userAccuracy.total = userAccuracy.total + 1;
+            
+            console.log(`Current progress is ${userAccuracy.correct}/${userAccuracy.total}`);
+            
+            accuracyTracker.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
-const submitButtons = document.querySelectorAll("#submit-result")
-submitButtons.forEach((submitButton) => {
-    submitButton.addEventListener("click", (event) => {
-        let clickedButton = answerButton;
-        if (event.target) {
-            console.log("Correct!")
+        } else if (event.target.innerText !== correctAnswerOne) {
+            answerResults.appendChild(incorrectButtonElement);
+
+            userAccuracy.incorrect = userAccuracy.incorrect + 1;
+            userAccuracy.total = userAccuracy.total + 1;
+            console.log(`Current progress is ${userAccuracy.correct}/${userAccuracy.total}`)
+
+            accuracyTracker.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
+
         } else {
-            console.log("Incorrect!")
+
         }
+
     });
+
 });
+
+
+
+
+
+
 
 
 const nextQuestion = document.querySelectorAll("#next-button")

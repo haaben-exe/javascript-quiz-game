@@ -12,24 +12,27 @@
 
 <body>
 
-    <div class="landing page">
+    <div class="landing-page hidden-landing-page visible-landing-page">
         <h1>
             Javascript Rules!
         </h1>
         <h3>
-            Test out your Javascript knowledge!
+            Ready to test out your Javascript knowledge?
         </h3>
+        <h5>
+            If you can get at least 9 out of 12 answers correct, then you're ready to code!
+        </h5>
         <button id="start">
             Play Now!
         </button>
     </div>
 
-    <div class="quiz-container hidden-1">
+    <div class="quiz-container hidden-question-1">
         <div id="quiz-question-1">
             <h2 id="question-1">
                 What is a Javascript Function?
             </h2>
-            <div id="answer-buttons-1">
+            <div id="quiz-question-1-buttons">
                 <button id="question-1-answer-a" class="answer-buttons-1">
                     A reusable block of code designed to perform a specific task.
                 </button>
@@ -42,11 +45,14 @@
                 <button id="question-1-answer-d" class="answer-buttons-1">
                     Placeholder 3
                 </button>
+                <div id="answer-result-1">
+
+                </div>
+                <div id="accuracy-tracker">
+                    
+                </div>
             </div>
-            <button id="submit-answer">
-                Submit Answer
-            </button>
-            <button id="next-button">
+            <button id="next-button hidden-button-1 visible-button">
                 Next Question
             </button>
         </div>

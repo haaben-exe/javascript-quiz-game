@@ -15,8 +15,16 @@ button {
     width: 100px;
 }
 
-.hidden-1 {
+.hidden-landing-page {
     visibility: hidden;
+}
+
+.visible-landing-page {
+    visibility: visible;
+}
+
+.hidden-question-1 {
+    visibility: hidden
 }
 
 .blue {

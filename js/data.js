@@ -5,20 +5,15 @@
 /*  
 
     User Stories:
-        1) I want to see a landing page to know if either the game is
-            beginning a new game. ✔️
+        1) I want to see a landing page to know if either the game is beginning a new game. ✔️
 
-        2) I want to be able to click on an answer and submit it to see if my choice was correct. 
+        2) I want to be able to click on an answer to see if my choice was correct. ✔️
 
-        3) I want to see visual feedback after each question in order
-            to know if I made a mistake or got the question right.
+        3) I want to see visual feedback after each question in order to know if I made a mistake or got the question right. ✔️
             
-        4) I want to track my progress in-game in order to see how
-            many questions I got right and wrong so that I can know
-            what how many more mistakes I have left before I can't continue the quiz.
+        4) I want to track my progress in-game in order to see how many questions I got right and wrong so that I can know what how many more mistakes I have left before I can't continue the quiz. ✔️
 
-        5) At the end of my game, I want to be presented with a clear 
-            message indicating whether or not I won or loss.
+        5) At the end of my game, I want to be presented with a clear message indicating whether or not I won or loss.
         
         
      // 6) I want a clear and concise explanation as to why the answer is correct, even if why my choice was wrong, so that I can learn from it and apply it on my next playthrough.
