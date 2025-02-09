@@ -23,8 +23,20 @@ button {
     visibility: visible;
 }
 
-.hidden-question-1 {
+.hidden-question-1, .hidden-question-2, .hidden-question-3 {
     visibility: hidden
+}
+
+.hidden-question-4, .hidden-question-5, .hidden-question-6 {
+    visibility: hidden
+}
+
+.hidden-question-7, .hidden-question-8, .hidden-question-9 {
+    visibility: hidden;
+}
+
+.hidden-question-10, .hidden-question-11, .hidden-question-12 {
+    visibility: hidden;
 }
 
 .blue {
