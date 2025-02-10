@@ -753,7 +753,7 @@ answerButtonsTwelve.forEach((answerButtonTwelve) => {
             userAccuracy.correct = userAccuracy.incorrect + 1;
             userAccuracy.total = userAccuracy.total + 1;
 
-            userAccuracy.incorrect > userAccuracy.incorrect + 9;
+            userAccuracy.incorrect >= userAccuracy.incorrect + 9;
             userAccuracy.total <= userAccuracy.total + 12;
 
             accuracyTrackerTwelve.textContent = `Unfortunately, you only got ${userAccuracy.correct} out of ${userAccuracy.total} correct. At least 9 out of 12 questions are required to pass.`;
