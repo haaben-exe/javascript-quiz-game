@@ -9,7 +9,7 @@
 const jsQuiz = [
     {
         question: [
-            "What is a JavaScript Function?", 
+            "What is a JavaScript Function?",
             "Why are JavaScript Functions used?",
             "When will you need to use a JavaScript Function?",
 
@@ -26,13 +26,13 @@ const jsQuiz = [
             "When will I need to use an Object in JavaScript?"
 
         ],
-        
+
         options: [
             "A reusable block of code designed to perform a specific task.",
             "A built-in JavaScript object that holds key-value pairs.",
             "A special kind of loop that runs forever.",
             "A method used only to declare variables.",
-            
+
             "To style HTML elements like CSS.",
             "They make your code reusable, modular, and easier to debug.",
             "To replace the need for variables.",
@@ -90,26 +90,26 @@ const jsQuiz = [
             "When you need to store multiple values without using variables.",
             "When you need to store multiple key-value pairs.",
         ],
-        
+
         answer: [
-            "A reusable block of code designed to perform a specific task.", 
-            
+            "A reusable block of code designed to perform a specific task.",
+
             "They make your code reusable, modular, and easier to debug.",
-            
+
             "When you want to execute the same logic multiple times or organize your code better.",
 
 
             "A Container used to store data values.",
-            
+
             "Allows you to store, retrieve, and manipulate data within your program.",
-            
+
             "Whenever you need to store values like user input, calculations, or temporary data.",
 
 
             "Used to store multiple items in one variable.",
-            
+
             "Arrays store lists of data efficiently and allow for easy manipulation.",
-            
+
             "When handling multiple related pieces of data, like a list of names or numbers.",
 
 
@@ -262,7 +262,7 @@ const themeMusic = new Audio("food-show-163665.mp3");
 const buttonStart = document.querySelector("#start");
 buttonStart.addEventListener("click", () => {
     document.querySelector("#start").classList.remove("visible-start");
-    
+
     document.querySelector(".quiz-container-1").classList.remove("hidden-question-1");
     document.querySelector(".quiz-container-2").classList.remove("hidden-question-2");
     document.querySelector(".quiz-container-3").classList.remove("hidden-question-3");
@@ -278,10 +278,10 @@ buttonStart.addEventListener("click", () => {
     document.querySelector(".quiz-container-10").classList.remove("hidden-question-10");
     document.querySelector(".quiz-container-11").classList.remove("hidden-question-11");
     document.querySelector(".quiz-container-12").classList.remove("hidden-question-12");
-    
+
 })
 buttonStart.addEventListener("click", (event) => {
-    themeMusic.volume = .007
+    themeMusic.volume = .02
     themeMusic.play()
     themeMusic.addEventListener("ended", () => {
         themeMusic.currentTime = 0;
@@ -312,7 +312,7 @@ answerButtonsOne.forEach((answerButtonOne) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerOne.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerOne) {
@@ -351,7 +351,7 @@ answerButtonsTwo.forEach((answerButtonTwo) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerTwo.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerTwo) {
@@ -390,7 +390,7 @@ answerButtonsThree.forEach((answerButtonThree) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerThree.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerThree) {
@@ -400,7 +400,7 @@ answerButtonsThree.forEach((answerButtonThree) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerThree.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -429,7 +429,7 @@ answerButtonsFour.forEach((answerButtonFour) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerFour.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerFour) {
@@ -439,7 +439,7 @@ answerButtonsFour.forEach((answerButtonFour) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerFour.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -468,7 +468,7 @@ answerButtonsFive.forEach((answerButtonFive) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerFive.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerFive) {
@@ -478,7 +478,7 @@ answerButtonsFive.forEach((answerButtonFive) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerFive.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -507,7 +507,7 @@ answerButtonsSix.forEach((answerButtonSix) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerSix.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerSix) {
@@ -517,7 +517,7 @@ answerButtonsSix.forEach((answerButtonSix) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerSix.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -546,7 +546,7 @@ answerButtonsSeven.forEach((answerButtonSeven) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerSeven.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerSeven) {
@@ -556,7 +556,7 @@ answerButtonsSeven.forEach((answerButtonSeven) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerSeven.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -585,7 +585,7 @@ answerButtonsEight.forEach((answerButtonEight) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerEight.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerEight) {
@@ -595,7 +595,7 @@ answerButtonsEight.forEach((answerButtonEight) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerEight.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -624,7 +624,7 @@ answerButtonsNine.forEach((answerButtonNine) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerNine.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerNine) {
@@ -634,7 +634,7 @@ answerButtonsNine.forEach((answerButtonNine) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerNine.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -663,7 +663,7 @@ answerButtonsTen.forEach((answerButtonTen) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerTen.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerTen) {
@@ -673,7 +673,7 @@ answerButtonsTen.forEach((answerButtonTen) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerTen.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -702,7 +702,7 @@ answerButtonsEleven.forEach((answerButtonEleven) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             accuracyTrackerEleven.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
 
         } else if (event.target.innerText !== correctAnswerEleven) {
@@ -712,7 +712,7 @@ answerButtonsEleven.forEach((answerButtonEleven) => {
             userAccuracy.total = userAccuracy.total + 1;
 
             accuracyTrackerEleven.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+
         } else {
 
         }
@@ -741,10 +741,10 @@ answerButtonsTwelve.forEach((answerButtonTwelve) => {
 
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
-            
+
             userAccuracy.correct >= userAccuracy.correct + 9;
             userAccuracy.total <= userAccuracy.total + 12;
-            
+
             accuracyTrackerTwelve.textContent = `Congratulations! You got ${userAccuracy.correct} out of ${userAccuracy.total} correct! You are ready to code!`;
 
         } else if (event.target.innerText !== correctAnswerTwelve) {
