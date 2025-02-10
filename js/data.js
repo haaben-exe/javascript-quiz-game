@@ -13,14 +13,7 @@
             
         4) I want to track my progress in-game in order to see how many questions I got right and wrong so that I can know what how many more mistakes I have left before I can't continue the quiz. ✔️
 
-        5) At the end of my game, I want to be presented with a clear message indicating whether or not I won or loss.
-        
-        
-     // 6) I want a clear and concise explanation as to why the answer is correct, even if why my choice was wrong, so that I can learn from it and apply it on my next playthrough.
-        
-     // 7) I want to be able to track my progress before I close my browser so I can play again and see if I made any improvements on any of my attempts.
- 
-     // 8) I want the option to play again in order to improve my score for the next playthrough.
+        5) At the end of my game, I want to be presented with a clear message indicating whether or not I won or loss. ✔️
 
 
     Pseudocode:
@@ -139,17 +132,6 @@
                 -Complete final round for win condition
             -Complete entire board for flawless victory & secret 
                 challenge
-
- //    Co-op:
-            // -Up to 3 players can play
-            // -if all 3 get lower than 10,000 (lose conditon)
-            //     --tally high score after 3 mistakes and compare score 
-            //     to determine winner
-            // -10,000 minimum score to go into a final round to 
-            //     determine winner
-            // -Each player to complete entire board gets shared secret 
-            //     challenge:
-            //         --First to complete secret challenge wins game
 
 
     Categorical Questions
