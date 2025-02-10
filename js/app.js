@@ -281,7 +281,7 @@ buttonStart.addEventListener("click", () => {
 
 })
 buttonStart.addEventListener("click", (event) => {
-    themeMusic.volume = .5
+    themeMusic.volume = .3
     themeMusic.play()
     themeMusic.addEventListener("ended", () => {
         themeMusic.currentTime = 0;
