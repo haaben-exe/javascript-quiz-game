@@ -1,13 +1,40 @@
 * {
-    background-color: rgb(36, 6, 63);
-    font-family: sans-serif;
+    background-color: #6d4095;
+    font-family: system-ui, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-title {
+    visibility: hidden;
+}
+
+.landing-page, h1, h3, h5 {
+    border-radius: 15px;
+    
+}
+
+.input {
+    width: 400px;
+    column-gap: 50px 50px;
+    padding: 5px 50px;
 }
 
 body {
-    display: flex;
     color: bisque;
-    justify-content: center;
-    flex-direction: column;
+}
+
+div, h1, h2, h3, h5 {
+    background-color: #461c6a;
+    padding: 15px 15px;
+    border-color: 10px solid black;
+    width: 500px;
+}
+
+.input {
+    background-color: rgb(36, 6, 63);
 }
 
 button {
@@ -15,8 +42,12 @@ button {
     width: 100px;
 }
 
-.hidden-landing-page {
+.hidden-start {
     visibility: hidden;
+}
+
+.visible-start {
+    visibility: visible;
 }
 
 .visible-landing-page {

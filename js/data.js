@@ -181,6 +181,7 @@
                 + Pick one of five
 
             500) *Please identify each part of the Function*: (MS)
+                Example:
                 function greet() {
                     console.log("Hello, world!");
                 }
@@ -204,6 +205,7 @@
                 + Pick one of five
 
             600) *Please identify each part of the Array*. (MS)
+                Example:
                 let colors = ["red", "blue", "green"];
                     console.log(colors[0]); // Outputs "red"
                 
@@ -297,56 +299,6 @@
 
 
 
-
-
-
-
-    
-
-
-
-
-// Tic Tac Toe Pseudocode
-//1) Define the required variables used to track the state of the game.
-
-//2) Store cached element references.
-
-//3) Upon loading, the game state should be initialized, and a 
-//  function should be called to render this game state.
-
-//4) The state of the game should be rendered to the user.
-
-//5) Define the required constants.
-
-//6) Handle a player clicking a square with a `handleClick` function.
-
-//7) Create Reset functionality.
-
-
-
-
-
-
-// Rock Paper Scissors Pseudocode
-// 1) Define any variables used to track the state of the game:
-//    The players choice
-//    The computers choice
-//    The match result - win/lose/tie
-//    A result message - display who won that round
-
-// 2) Define the required constants:
-//    There are only 3 choices a user can make ("rock", "paper", "scissors")
-//    We'll need a reference to a DOM element to display messages
-
-// 3) Handle a player clicking a button
-
-// 4) Handle generating random selections for the computer player
-
-// 5) Compare the player choice to the computer choice, and check for a winner
-
-// 6) Render a win/lose/tie message to the player 
-//    Include both player and computer selections in the message
-//    Clearly indicate who won
 
 
 

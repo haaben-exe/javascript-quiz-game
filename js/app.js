@@ -5,13 +5,6 @@
 
 /*------------------------ Constants ------------------------------*/
 
-// Defining the user accuracy percentage which will be used for tracking score
-let userAccuracy = {
-    correct: 0,
-    incorrect: 0,
-    total: 0,
-};
-
 // Storing the questions/options/answers in an object for reference later in code
 const jsQuiz = [
     {
@@ -33,6 +26,7 @@ const jsQuiz = [
             "When will I need to use an Object in JavaScript?"
 
         ],
+        
         options: [
             "A reusable block of code designed to perform a specific task.",
             "A built-in JavaScript object that holds key-value pairs.",
@@ -96,6 +90,7 @@ const jsQuiz = [
             "When you need to store multiple values without using variables.",
             "When you need to store multiple key-value pairs.",
         ],
+        
         answer: [
             "A reusable block of code designed to perform a specific task.", 
             
@@ -133,25 +128,16 @@ const jsQuiz = [
 let clickedButton = null;
 
 
+let message = ""
 
-/*------------------ Cached Element References --------------------*/
 
-// Declaring the correct as its own variable for reusability & readability
-const correctAnswerOne = jsQuiz[0].answer[0];
-const correctAnswerTwo = jsQuiz[0].answer[1];
-const correctAnswerThree = jsQuiz[0].answer[2];
+// Defining the user accuracy percentage which will be used for tracking score
+let userAccuracy = {
+    correct: 0,
+    incorrect: 0,
+    total: 0,
+};
 
-const correctAnswerFour = jsQuiz[0].answer[3];
-const correctAnswerFive = jsQuiz[0].answer[4];
-const correctAnswerSix = jsQuiz[0].answer[5];
-
-const correctAnswerSeven = jsQuiz[0].answer[6];
-const correctAnswerEight = jsQuiz[0].answer[7];
-const correctAnswerNine = jsQuiz[0].answer[8];
-
-const correctAnswerTen = jsQuiz[0].answer[9];
-const correctAnswerEleven = jsQuiz[0].answer[10];
-const correctAnswerTwelve = jsQuiz[0].answer[11];
 
 /*------------------------- Functions -----------------------------*/
 
@@ -178,37 +164,38 @@ function displayAccuracy(quizAnswer) {
     displayAccuracy.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`
 }
 
+let correctAnswers = userAccuracy.correct;
+let totalQuestions = userAccuracy.total;
+let incorrectAnswers = userAccuracy.incorrect
 
-/*----------------------- Event Listeners -------------------------*/
+function displayResults(correctAnswers, totalQuestions) {
+    if (correctAnswers >= 9 && correctAnswers <= 12) {
+        message = `Congratulations! You got ${correctAnswers} out of ${totalQuestions} correct! You are ready to code!`
+    } else {
+        message = `Unfortunately, you only got ${correctAnswers} out of ${totalQuestions} correct. At least 9 out of 12 questions are required to pass.`;
+    }
+}
 
-// !REMEMBER TO DELETE ANY UNUSED CODE BEFORE SUBMISSION!
-//// console.log(`${userAccuracy.correct}`)
-////console.log(`Current progress is 
-////    ${userAccuracy.correct}/${userAccuracy.total}`)
 
 
-// Hiding the landing page once "Play Now" has been clicked then showing the  questions after
-const buttonStart = document.querySelector("#start");
-buttonStart.addEventListener("click", () => {
-    document.querySelector(".landing-page").classList.remove("visible-landing-page");
-    
-    document.querySelector(".quiz-container-1").classList.remove("hidden-question-1");
-    document.querySelector(".quiz-container-2").classList.remove("hidden-question-2");
-    document.querySelector(".quiz-container-3").classList.remove("hidden-question-3");
+/*------------------ Cached Element References --------------------*/
 
-    document.querySelector(".quiz-container-4").classList.remove("hidden-question-4");
-    document.querySelector(".quiz-container-5").classList.remove("hidden-question-5");
-    document.querySelector(".quiz-container-6").classList.remove("hidden-question-6");
+// Declaring the correct as its own variable for reusability & readability
+const correctAnswerOne = jsQuiz[0].answer[0];
+const correctAnswerTwo = jsQuiz[0].answer[1];
+const correctAnswerThree = jsQuiz[0].answer[2];
 
-    document.querySelector(".quiz-container-7").classList.remove("hidden-question-7");
-    document.querySelector(".quiz-container-8").classList.remove("hidden-question-8");
-    document.querySelector(".quiz-container-9").classList.remove("hidden-question-9");
+const correctAnswerFour = jsQuiz[0].answer[3];
+const correctAnswerFive = jsQuiz[0].answer[4];
+const correctAnswerSix = jsQuiz[0].answer[5];
 
-    document.querySelector(".quiz-container-10").classList.remove("hidden-question-10");
-    document.querySelector(".quiz-container-11").classList.remove("hidden-question-11");
-    document.querySelector(".quiz-container-12").classList.remove("hidden-question-12");
-    
-})
+const correctAnswerSeven = jsQuiz[0].answer[6];
+const correctAnswerEight = jsQuiz[0].answer[7];
+const correctAnswerNine = jsQuiz[0].answer[8];
+
+const correctAnswerTen = jsQuiz[0].answer[9];
+const correctAnswerEleven = jsQuiz[0].answer[10];
+const correctAnswerTwelve = jsQuiz[0].answer[11];
 
 // Creating the answerChoices just incase (might delete later)
 const answerChoices = document.querySelectorAll(".quiz-container")
@@ -263,6 +250,46 @@ const accuracyTrackerNine = document.querySelector("#accuracy-tracker-9");
 const accuracyTrackerTen = document.querySelector("#accuracy-tracker-10");
 const accuracyTrackerEleven = document.querySelector("#accuracy-tracker-11");
 const accuracyTrackerTwelve = document.querySelector("#accuracy-tracker-12");
+
+
+const themeMusic = new Audio("food-show-163665.mp3");
+
+
+/*----------------------- Event Listeners -------------------------*/
+
+
+// Hiding the landing page once "Play Now" has been clicked then showing the  questions after
+const buttonStart = document.querySelector("#start");
+buttonStart.addEventListener("click", () => {
+    document.querySelector("#start").classList.remove("visible-start");
+    
+    document.querySelector(".quiz-container-1").classList.remove("hidden-question-1");
+    document.querySelector(".quiz-container-2").classList.remove("hidden-question-2");
+    document.querySelector(".quiz-container-3").classList.remove("hidden-question-3");
+
+    document.querySelector(".quiz-container-4").classList.remove("hidden-question-4");
+    document.querySelector(".quiz-container-5").classList.remove("hidden-question-5");
+    document.querySelector(".quiz-container-6").classList.remove("hidden-question-6");
+
+    document.querySelector(".quiz-container-7").classList.remove("hidden-question-7");
+    document.querySelector(".quiz-container-8").classList.remove("hidden-question-8");
+    document.querySelector(".quiz-container-9").classList.remove("hidden-question-9");
+
+    document.querySelector(".quiz-container-10").classList.remove("hidden-question-10");
+    document.querySelector(".quiz-container-11").classList.remove("hidden-question-11");
+    document.querySelector(".quiz-container-12").classList.remove("hidden-question-12");
+    
+})
+buttonStart.addEventListener("click", (event) => {
+    themeMusic.volume = .007
+    themeMusic.play()
+    themeMusic.addEventListener("ended", () => {
+        themeMusic.currentTime = 0;
+        themeMusic.play();
+    })
+})
+
+
 
 
 
@@ -715,16 +742,22 @@ answerButtonsTwelve.forEach((answerButtonTwelve) => {
             userAccuracy.correct = userAccuracy.correct + 1;
             userAccuracy.total = userAccuracy.total + 1;
             
-            accuracyTrackerTwelve.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
+            userAccuracy.correct >= userAccuracy.correct + 9;
+            userAccuracy.total <= userAccuracy.total + 12;
+            
+            accuracyTrackerTwelve.textContent = `Congratulations! You got ${userAccuracy.correct} out of ${userAccuracy.total} correct! You are ready to code!`;
 
         } else if (event.target.innerText !== correctAnswerTwelve) {
             answerResultsTwelve.appendChild(incorrectButtonElement);
 
-            userAccuracy.incorrect = userAccuracy.incorrect + 1;
+            userAccuracy.correct = userAccuracy.incorrect + 1;
             userAccuracy.total = userAccuracy.total + 1;
 
-            accuracyTrackerTwelve.textContent = `Current progress is ${userAccuracy.correct}/${userAccuracy.total}`;
-            
+            userAccuracy.incorrect > userAccuracy.incorrect + 9;
+            userAccuracy.total <= userAccuracy.total + 12;
+
+            accuracyTrackerTwelve.textContent = `Unfortunately, you only got ${userAccuracy.correct} out of ${userAccuracy.total} correct. At least 9 out of 12 questions are required to pass.`;
+
         } else {
 
         }
@@ -734,22 +767,4 @@ answerButtonsTwelve.forEach((answerButtonTwelve) => {
 });
 
 
-// const firstButton = document.getElementById("question-1-answer-a")
-// console.log(firstButton);
-// firstButton.addEventListener("click", (event) => {
-// console.log(event.target.textContent, "This button was clicked");
-
-// });
-
-
-
-
-
-
-
-
-
-
-// create a forEach loop to add the event listener to every button with a class of answer-button ()
-// the event listener should compare user's input to correct answer
-// comparison needs to be precise in order to check question for its right answer
+gameResultsDisplay = document.querySelector("#win-loss-message")
