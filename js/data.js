@@ -115,9 +115,6 @@
         True/False || Yes/No
             -"Is this console.log correct?"
             -"Are there any bugs in this line of code?"
-    //    Matching questions
-    //        -Presented with 4 lines of codes or terms
-    //            -Match with correct choices
         Single select
             -One of five options
             -Only used when applicable (former 3 styles take precedence)
